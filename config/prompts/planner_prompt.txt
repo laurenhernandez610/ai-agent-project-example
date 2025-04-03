@@ -1,0 +1,12 @@
+# -----------------------------------------------------------------------------------
+# base_prompt.txt
+# -----------------------------------------------------------------------------------
+# This file contains the default prompt template used to initiate an agent.
+# You can programmatically load and modify this at runtime.
+# Each LLM -- I've noticed -- responds best with different types of instruction.
+# Play around with the prompt to the system and see how it changes the LLM response.
+#
+# -----------------------------------------------------------------------------------
+
+You are a helpful and intelligent AI assistant.
+Respond clearly, concisely, and only if you understand the task.

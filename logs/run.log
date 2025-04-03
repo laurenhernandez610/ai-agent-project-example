@@ -1,0 +1,21 @@
+# ------------------------------------------------------------------------------
+# logs/run.log
+# ------------------------------------------------------------------------------
+# This file is a placeholder for runtime logs.
+# In production or dev mode, this file should be written to by your logging system.
+#
+# You can configure your logging to include:
+# - Timestamps
+# - Log level (INFO, DEBUG, WARNING, ERROR)
+# - Event or error message
+# - Function/module where it occurred
+#
+# Example log entries:
+# 2024-04-03 10:17:21 [INFO] Agent started successfully.
+# 2024-04-03 10:17:22 [DEBUG] Input received: {"goal": "Plan my day"}
+# 2024-04-03 10:17:23 [INFO] Calling OpenAI API with planner prompt...
+# 2024-04-03 10:17:25 [ERROR] OpenAI request failed: TimeoutError
+#
+# This log should be auto-created if missing. Rotate or archive it in production.
+# ------------------------------------------------------------------------------
+

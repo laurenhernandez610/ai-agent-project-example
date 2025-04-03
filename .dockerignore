@@ -1,0 +1,44 @@
+# ------------------------------------------------------------------------------
+# .dockerignore
+# ------------------------------------------------------------------------------
+# This file tells Docker which files/folders to ignore when building the image.
+# It improves build performance and avoids copying sensitive/dev files into the container.
+# ------------------------------------------------------------------------------
+
+# Bytecode and Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Git and project metadata
+.git/
+.gitignore
+
+# Environment files (real secrets)
+.env
+*.env
+
+# Data (keep this local — never bake into image)
+data/
+logs/
+tests/
+
+# Notebooks and temp files
+*.ipynb
+*.log
+*.tmp
+
+# System or editor files
+.DS_Store
+.vscode/
+.idea/
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db

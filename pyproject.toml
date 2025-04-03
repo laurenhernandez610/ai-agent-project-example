@@ -1,0 +1,61 @@
+# ------------------------------------------------------------------------------
+# pyproject.toml
+# ------------------------------------------------------------------------------
+# This is the modern, centralized configuration file for Python projects.
+# Introduced in PEP 518, it replaces scattered config files like:
+#   - setup.cfg
+#   - .flake8
+#   - .isort.cfg
+#   - pyrightconfig.json
+#   - and even parts of setup.py (eventually)
+#
+# It defines build system requirements AND centralizes tool-specific configurations,
+# so you can manage formatters, linters, and future tools all in one place.
+#
+# Most editors (VSCode, PyCharm) will auto-detect this file and apply consistent
+# formatting and linting based on its contents.
+#
+# In this project, we still use `requirements.txt` for installing dependencies,
+# but `pyproject.toml` gives us fine-grained control over how the codebase is formatted,
+# linted, and interpreted by modern tooling.
+# ------------------------------------------------------------------------------
+
+[build-system]
+requires = ["setuptools", "wheel"]         # Basic Python build tools
+build-backend = "setuptools.build_meta"    # Backend used to package the project
+
+# -------------------------------------------------------------------
+# Black - Opinionated Code Formatter
+# Ensures code formatting is consistent across the team and tools
+# -------------------------------------------------------------------
+[tool.black]
+line-length = 88                           # Standard width; matches flake8 and isort
+target-version = ['py310']                # Target Python 3.10
+exclude = '''                             # Files and folders to skip formatting
+/(
+    \.git
+  | \.mypy_cache
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# -------------------------------------------------------------------
+# isort - Sorts Python imports into standard sections (stdlib, 3rd party, local)
+# -------------------------------------------------------------------
+[tool.isort]
+profile = "black"                         # Ensures compatibility with Black's style
+line_length = 88
+multi_line_output = 3                     # Vertical hanging indent for readability
+include_trailing_comma = true             # Helps with cleaner diffs
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true     # Better separation of logic/comments
+
+# -------------------------------------------------------------------
+# flake8 - Linting tool to catch syntax/style issues not fixed by Black
+# -------------------------------------------------------------------
+[tool.flake8]
+max-line-length = 88
+exclude = .git,__pycache__,.venv,build,dist

@@ -1,0 +1,43 @@
+# ------------------------------------------------------------------------------
+# requirements.txt
+# ------------------------------------------------------------------------------
+# This file lists all Python dependencies required to run the project.
+# It's used by pip to install the correct packages and versions for local dev,
+# production, containerization (Docker), and CI/CD environments.
+#
+# To install everything locally:
+#   pip install -r requirements.txt
+# ------------------------------------------------------------------------------
+
+# --- Web Framework / API Server ---
+fastapi                  # Lightweight web framework for building APIs
+uvicorn[standard]        # ASGI server to run FastAPI apps
+
+# --- Core Agent & LLM Communication ---
+openai                   # Official OpenAI API SDK
+langchain                # Optional: orchestration for multi-step agent chains
+tiktoken                 # Token counting for LLM context handling
+
+# --- Data Handling ---
+pandas                   # Data analysis & manipulation
+numpy                    # Numerical computing
+pyyaml                   # Working with YAML config files
+
+# --- Configuration & Secrets ---
+pydantic                 # Settings management + data validation
+python-dotenv            # Load environment variables from .env
+
+# --- Async / HTTP Clients ---
+httpx                    # Async HTTP requests (used by OpenAI + others)
+
+# --- Dev & Testing ---
+pytest                   # Testing framework
+pytest-mock              # Mocks for unit tests
+black                    # Auto-formatter
+isort                    # Import sorting
+flake8                   # Code linting
+
+# --- Deployment / Observability ---
+gunicorn                 # Production WSGI server (optional if deploying w/ Uvicorn)
+docker                   # Container support
+loguru                   # Cleaner logging (optional but nice to have)

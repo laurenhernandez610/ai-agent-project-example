@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------------
+# endpoints.yaml
+# ------------------------------------------------------------------------------
+# This file defines external service endpoints your agent may call.
+# Helps isolate third-party URLs from logic and code.
+# ------------------------------------------------------------------------------
+
+openai:
+  base_url: https://api.openai.com/v1
+
+serpapi:
+  base_url: https://serpapi.com/search
+
+internal_db:
+  base_url: http://internal.api.company.com/query

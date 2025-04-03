@@ -1,0 +1,14 @@
+# ------------------------------------------------------------------------------
+# thresholds.yaml
+# ------------------------------------------------------------------------------
+# Optional config file for tuning heuristics.
+# Used to define min/max ranges, confidence cutoffs, or timeouts.
+# ------------------------------------------------------------------------------
+
+llm:
+  max_tokens: 1024
+  min_confidence: 0.7
+
+timeouts:
+  openai: 10     # seconds
+  planner_tool: 5

@@ -1,0 +1,49 @@
+{
+    "info": {
+      "_postman_id": "12345678-aaaa-bbbb-cccc-1234567890ab",
+      "name": "AI Assistant API",
+      "description": "Postman collection for testing the AI Assistant API endpoints.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Run Planning Agent",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"goal\": \"Plan my work for the day\",\n  \"preferences\": {\n    \"time_blocking\": true\n  }\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8000/plan",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8000",
+            "path": ["plan"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Health Check",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:8000/health",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8000",
+            "path": ["health"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

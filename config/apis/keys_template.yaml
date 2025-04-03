@@ -1,0 +1,9 @@
+# ------------------------------------------------------------------------------
+# keys_template.yaml
+# ------------------------------------------------------------------------------
+# Template for organizing API keys. DO NOT USE REAL KEYS IN THIS FILE.
+# Instead, put real keys in your .env file or your secure secrets manager.
+# ------------------------------------------------------------------------------
+
+openai: "your-openai-api-key-here"
+serpapi: "your-serpapi-api-key-here"
